@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    div {text-align: center;}
+    h2 {text-align: center;}
+    
+</style>
+<title>Hare Krishna!</title>
+</head>
+<body bgcolor="green", text="white">
+   <h2><marquee> Who cares about the body? It is the soul that matters!!</marquee></h2>
+   <div class="container">
+   <div class="card">
+   <h2 >This program will tell if your number is odd or even</h2>
+
+<form action="/odd_even_function" method="post">
+  <label for="fname">Type any number below</label><br>
+  <input type="text" id="input_param" name="input_param"><br>
+  <input type="submit" value="Submit">
+</form> 
+</div>
+{% if response %}
+    {% if response.message!="Success" %}
+        <p>Message from the backend: {{response.message}}</p>
+    {% endif %}
+    <p>The number submitted is {{response.odd_even}}</p>
+{% endif %}
+</div>
+</div>
+</body>
+</html>
