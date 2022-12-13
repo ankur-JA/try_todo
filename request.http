@@ -1,0 +1,11 @@
+GET http://localhost:5000/students
+
+###
+POST http://localhost:5000/students
+Content-Type: application/json
+
+{
+    "dept": "AE",
+    "name": "Ankut",
+    "roll": 9
+}
